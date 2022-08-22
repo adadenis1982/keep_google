@@ -1,0 +1,1 @@
+# Simplified copy Google Keep
