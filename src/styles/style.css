@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 17px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  font-size: 1.3em;
+}
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.app {
+  min-height: 100vh;
+}
+.app.dark {
+  background-color: #202124;
+}
+.navbar {
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(110, 110, 110);
+}
+.navbar.dark {
+  background-color: #202124;
+  border-bottom: 1px solid #ececec;
+}
+.navbar .nav-group {
+  display: flex;
+  align-items: center;
+}
+.navbar .icon {
+  color: #777777;
+  font-size: larger;
+}
+.navbar.dark .icon {
+  color: #ececec;
+}
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.navbar .navbar-brand img {
+  width: 30px;
+  margin-right: 0.5em;
+}
+.navbar .navbar-brand h1 {
+  color: #777777;
+  font-weight: 400;
+}
+.navbar.dark .navbar-brand h1 {
+  color: #ececec;
+  font-weight: 400;
+}
+.navbar .search-div {
+  padding: 1em;
+  width: 600px;
+  background-color: #ececec;
+  border-radius: 3px;
+  font-size: 0.8em;
+  display: flex;
+}
+.navbar.dark .search-div {
+  background-color: #525355;
+}
+.navbar.dark .search-div input::placeholder {
+  color: #ececec;
+}
+.navbar .search-div .icon {
+  font-size: 25px;
+  margin: 0;
+}
+.navbar.dark .search-div .icon {
+  color: #ececec;
+}
+.navbar .search-div input {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding-left: 0.5em;
+  color: #777777;
+  cursor: pointer;
+}
+.navbar .search-div input:focus {
+  outline: none;
+}
+.navbar .nav-group .menu-item {
+  margin-left: 0.5em;
+}
+.input-section {
+  padding: 1em;
+  margin: 1em 0;
+}
+.input-section .input-container {
+  width: 600px;
+  margin: auto;
+  box-shadow: 7px 7px 25px #e0e0e0, -7px -7px 25px #ffffff;
+  padding: 0.2em 0.5em;
+}
+.input-section.dark .input-container {
+  box-shadow: 7px 7px 25px #1b1c1f, -7px -7px 25px #252629;
+  border: 1px solid #525355;
+}
+.input-section .input-container input,
+.input-section .input-container textarea {
+  width: 100%;
+  padding: 0.3em 0.5em;
+  border: 0;
+  margin-top: 0.3em;
+  font-style: 16px;
+  color: #777777;
+  resize: none;
+}
+.input-section.dark .input-container input,
+.input-section.dark .input-container textarea {
+  background-color: #202124;
+  color: #ececec;
+}
+.input-section .input-container input:focus,
+.input-section .input-container textarea:focus {
+  outline: none;
+}
+.input-section .input-container button {
+  border: 0;
+  background: transparent;
+  color: #202124;
+  cursor: pointer;
+  display: block;
+  margin: 0 0.2em 0.2em auto;
+}
+.input-section.dark .input-container button {
+  color: #ececec;
+}
+.input-section .input-container button:focus {
+  outline: none;
+}
+.blank {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.blank img {
+  width: 100px;
+  margin-bottom: 1em;
+}
+.blank h4 {
+  color: #cecece;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+.note-container {
+  width: 90%;
+  margin: auto;
+}
+.note-container .card {
+  height: auto;
+  position: relative;
+  margin: 0.5em;
+  padding: 1em;
+  border-radius: 7px;
+  background: #ffffff;
+  padding-bottom: 3em;
+  /* box-shadow: 10px 10px 32px #e3e3e3, -15px -15px 32px #ffffff; */
+  border: 1px solid #dbdbdb;
+  white-space: pre-wrap;
+  height: fit-content;
+}
+.note-container.dark .card {
+  background: #202124;
+  border: 1px solid #525355;
+}
+.note-container .card textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+}
+.note-container.dark .card textarea {
+  background-color: #202124;
+}
+.note-container .card textarea:focus {
+  outline: none;
+}
+.note-container .card textarea.title {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+  color: #3a3a3a;
+}
+.note-container.dark .card textarea.title {
+  color: #ececec;
+}
+.note-container .card textarea.body {
+  color: #777777;
+}
+.note-container.dark .card textarea.body {
+  color: #b6b6b6;
+}
+.note-container .card .options {
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 1em;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.note-container.dark .card .options .icon {
+  color: #e0e0e0;
+}
+.note-container .card:hover .options {
+  opacity: 1;
+}
+@media (min-width: 600px) {
+  .note-container {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar .navbar-brand {
+    display: none;
+  }
+  .navbar .search-div {
+    padding: 0.5em;
+    width: 230px;
+    font-size: 0.8em;
+  }
+  .navbar .nav-group .menu-item.md {
+    display: none;
+  }
+  .input-section .input-container {
+    width: 300px;
+  }
+  .blank h4 {
+    font-size: 1em;
+  }
+  .note-container .card .options {
+    opacity: 1;
+  }
+}
