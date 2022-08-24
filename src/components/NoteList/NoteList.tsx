@@ -17,7 +17,7 @@ const NoteList = ({ notes, searchTerm }: Props) => {
   
   return (
     <>
-      {notes?.length ? (
+     {notes?.length ? (
         <div className='note-container'>
           {notes
             .filter((value) => {
@@ -39,6 +39,7 @@ const NoteList = ({ notes, searchTerm }: Props) => {
         </div>
       )}
     </>
+     
   );
 };
 

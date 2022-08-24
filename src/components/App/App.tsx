@@ -4,7 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import NoteInput from '../NoteInput/NoteInput';
 import NoteList from '../NoteList/NoteList';
 
-import '../../styles/style.css'
+import '../../styles/style.css';
 
 const App = () => {
   const notesAll = useAppSelector((state) => state.notes);
@@ -13,7 +13,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    setNotes(notesAll)
+    setNotes(notesAll);
   }, [notesAll]);
 
   const setSearch = (searchTerm: SetStateAction<string>) => {
@@ -21,15 +21,10 @@ const App = () => {
   };
 
   return (
-    <div className='app'>
-      <Navbar
-        setSearch={setSearch}
-      />
+    <div className="app">
+      <Navbar setSearch={setSearch} />
       <NoteInput />
-      <NoteList
-        notes={notes}
-        searchTerm={searchTerm}
-      />
+      <NoteList notes={notes} searchTerm={searchTerm} />
     </div>
   );
 };

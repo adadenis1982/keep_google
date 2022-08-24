@@ -4,7 +4,7 @@
   "homepage": "https://adadenis1982.github.io/keep_google",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
+    "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",

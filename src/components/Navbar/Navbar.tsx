@@ -10,6 +10,10 @@ import {
 import { BiDotsVertical } from 'react-icons/bi';
 import logo from '../../assets/logo.png';
 import deleteIcon from '../../assets/delete.svg';
+import {
+  AccountCircleOutlined as AccountsIcon,
+  ViewAgendaOutlined as ListIcon,
+} from '@material-ui/icons';
 import { IconButton, Tooltip } from '@material-ui/core';
 
 import '../../styles/style.css';
@@ -63,9 +67,11 @@ const Navbar = ({ setSearch }: Props) => {
               placeholder="Поиск"
               onChange={handleChange}
             />
-            {searchTerm ? <button onClick={handleClear}>
-              <img src={deleteIcon} alt="" />
-            </button> : null}
+            {searchTerm ? (
+              <button onClick={handleClear}>
+                <img src={deleteIcon} alt="" />
+              </button>
+            ) : null}
           </div>
         </div>
       </div>
@@ -85,11 +91,25 @@ const Navbar = ({ setSearch }: Props) => {
           </Tooltip>
         </div>
         <div className="menu-item md">
+          <IconButton aria-label="toggle list view">
+            <ListIcon />
+          </IconButton>
+        </div>
+        <div className="menu-item md">
           <Tooltip title="More">
             <IconButton aria-label="More">
               <BiDotsVertical className="icon" />
             </IconButton>
           </Tooltip>
+        </div>
+        <div className="menu-item md">
+          <IconButton
+            edge="end"
+            aria-label="account of current user"
+            aria-haspopup="true"
+          >
+            <AccountsIcon />
+          </IconButton>
         </div>
         <div className="menu-item">
           <div className="dp"></div>
